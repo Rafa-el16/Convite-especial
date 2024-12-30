@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Convite Especial</title>
+    <style> 
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(135deg, #f8b500, #ff6f61);
+        color: #fff;
+    }
+    h1 {
+       margin-bottom: 20px;
+       text-align: center; 
+    }
+    buttons {
+        display: flex;
+        gap: 20px;
+        position: relative;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #333;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        #no {
+            position: absolute;
+        }
+        #message {
+            margin-top: 30px;
+            font-size: 24px;
+            display: none;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Cuzinho??</h1>
+        <div> 
+        <button class="button" id="yes">Sim</button>
+        <button class="button" id="no">Não</button>
+    </div>
+    <div id="message">Sabia que não ia resistir! Safadinha</div>
+    <script>
+    // Seleciona os elementos
+    const noButton = document.getElementById('no');
+    const yesButton = document.getElementById('yes');
+    const message = document.getElementById('message');
+
+    // Adiciona evento ao botão "Não"
+    noButton.addEventListener('mouseover', () => {
+      const x = Math.random() * 500 - 300; // Coordenada X aleatória
+      const y = Math.random() * 500 - 300; // Coordenada Y aleatória
+      noButton.style.transform = `translate(${x}px, ${y}px)`; // Aplica movimento
+    });
+
+    // Adiciona evento ao botão "Sim"
+    yesButton.addEventListener('click', () => {
+      message.style.display = 'block'; // Exibe a mensagem
+    });
+    </script>
+    </body>
+</html>
